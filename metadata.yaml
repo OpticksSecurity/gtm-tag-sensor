@@ -1,0 +1,5 @@
+homepage: "https://optickssecurity.com"
+documentation: "https://support.optickssecurity.com/docs/articles/4423062577041-Use-Google-Tag-Manager-to-integrate-OpticksJS"
+versions:
+  - sha: 40b7ba031d977fba2362d937241971b55ae7e295
+    changeNotes: Initial release.
