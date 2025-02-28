@@ -106,14 +106,15 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 var injectScript = require('injectScript');
+var encodeUri = require('encodeUri');
 var encodeUriComponent = require('encodeUriComponent');
 
 var domain = 'https://opticksprotection.com';
-var url = domain + '/o/' + encodeUriComponent(data.sensorId);
+var url = domain + '/o/' + encodeUri(data.sensorId);
 
 if (data.macros) {
   for (var i = 0; i < data.macros.length; ++i) {
-    url += (i === 0 ? '?' : '&') + data.macros[i].macro + '=' + encodeUriComponent(data.macros[i].value || '');
+    url += (i === 0 ? '?' : '&') + encodeUriComponent(data.macros[i].macro) + '=' + encodeUriComponent(data.macros[i].value || '');
   }
 }
 
